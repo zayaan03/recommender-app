@@ -35,8 +35,8 @@ try:
     with open('similarity.pkl') as f:
         pickle.load(f)
         st.write('File loaded')
-except:
-    st.write('Error occured')
+except Exception as e:
+    st.write(f'Error occured: {e}')
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(

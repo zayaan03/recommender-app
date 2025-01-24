@@ -33,7 +33,7 @@ movies = pickle.load(open('movies.pkl','rb'))
 # similarity = pickle.load(open('similarity.pkl','r'))
 try:
     with open('similarity.pkl','rb') as f:
-        print(f.read(100))
+        st.write(f.read(100))
         # st.write('File loaded')
 except Exception as e:
     st.write(f'Error occured: {e}')

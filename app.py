@@ -2,10 +2,10 @@ import pickle
 import streamlit as st
 import requests
 import os
-if os.path.exists('similarity.pkl'):
-    st.write('File found')
-else:
-    st.write('file not found')
+# if os.path.exists('similarity.pkl'):
+#     st.write('File found')
+# else:
+#     st.write('file not found')
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=d59f899507ffcfb20099db546c9138c4&language=en-US".format(movie_id)
     data = requests.get(url)

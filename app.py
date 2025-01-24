@@ -30,7 +30,7 @@ def recommend(movie):
 
 st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','r'))
+similarity = pickle.load(open('similarity.pkl','rb'))
 # try:
 #     with open('similarity.pkl','r') as f:
 #         st.write(f.read(100))

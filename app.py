@@ -30,13 +30,13 @@ def recommend(movie):
 
 st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','r'))
-# try:
-#     with open('similarity.pkl','r') as f:
-#         pickle.load(f)
-#         st.write('File loaded')
-# except Exception as e:
-#     st.write(f'Error occured: {e}')
+# similarity = pickle.load(open('similarity.pkl','r'))
+try:
+    with open('similarity.pkl','rb') as f:
+        pickle.load(f)
+        st.write('File loaded')
+except Exception as e:
+    st.write(f'Error occured: {e}')
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(

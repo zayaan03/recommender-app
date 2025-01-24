@@ -32,7 +32,7 @@ st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
 # similarity = pickle.load(open('similarity.pkl','r'))
 try:
-    with open('similarity.pkl','rb') as f:
+    with open('similarity.pkl','r') as f:
         st.write(f.read(100))
         # st.write('File loaded')
 except Exception as e:
